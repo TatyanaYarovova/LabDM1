@@ -1,0 +1,15 @@
+.w50
+{
+	margin: 0px;
+	width: 30%;
+	height:30%;
+	position:absolute;
+}
+.d
+{
+	padding: 15px 20px 20px 20px;
+	background-color:#FFF8DC;
+	top: 25%;
+	left: 35%;
+	padding-top: 20px;
+}
