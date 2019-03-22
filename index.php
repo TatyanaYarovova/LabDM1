@@ -2,7 +2,7 @@
 	<head>
 		<title>Лабораторная работа №1</title>
 		<meta charset =  "utf-8">
-		<link rel="stylesheet" href="/styles/styles.css">
+		<link rel="stylesheet" href="styles/styles.css">
 	</head>
 	<body>
 		<div class="w50">
@@ -24,7 +24,7 @@
 
 
 							if($mass1[0] % 2 != 0){
-								echo "Первый элемент  массиве 1 должен быть четным";
+								echo "Первый элемент в массиве 1 должен быть четным";
 								echo'<br>';
 							}
 							if($mass1[1] % 2 == 0){
