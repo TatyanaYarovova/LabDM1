@@ -2,7 +2,7 @@
 	<head>
 		<title>Лабораторная работа №1</title>
 		<meta charset =  "utf-8">
-		<link rel="stylesheet" href="styles/styles.css">
+		<link rel="stylesheet" href="/styles.css">
 	</head>
 	<body>
 		<div class="w50">
@@ -22,7 +22,7 @@
 							$mass2 = split(" ", $_POST["mass2"]);
 
 
-
+							/*******************************************************/
 							if($mass1[0] % 2 != 0){
 								echo "Первый элемент в массиве 1 должен быть четным";
 								echo'<br>';
@@ -57,21 +57,54 @@
 								echo'<br>';
 							}
 							
-							$result = $mass1 + $mass2;
-							//print_r($result);
-							echo "Объединение:"; 
+							/*******************************************************/
+							
+							
+							echo "Объединение:";
 							echo '<br>';
-							foreach($result as $value){
-								echo $value, " ";
+							function MergerMass($mass1, $mass2)
+							{
+								$k = 0;
+								for($i = 0; $i < count($mass1); $i++)
+								{
+									$result[$k++] = $mass1[$i]; 
+								}
+								for($i = 0; $i < count($mass2); $i++)
+								{
+									$result[$k++] = $mass2[$i]; 
+								}
+								for($k = 0;$k < count($result); $k++)
+								{
+									echo $result[$k];
+								}
+								
+							
 							}
+													 
 							echo '<br>';
+							
+							
+							
+							
+							
 							echo "Пересечение:";
 							echo '<br>';
-							$per = array_intersect($mass1, $mass2); 
-							foreach($per as $value){
-								echo $value, " ";
-							} 
+							function PerMass($mass1, $mass2)
+							{
+								for($i = 0; $i < count($mass1); $i++)
+								{
+									if($mass1[$i] == $mass2[$i])
+										echo $mass1[$i];
+								}
+								
+							}
 							echo '<br>';
+							 
+							
+							
+							
+							
+							
 							echo "Симметрическая разность:";
 							echo '<br>';
 							$difference = array_merge(array_diff($mass1 , $mass2) , array_diff($mass2 , $mass1));
